@@ -16,13 +16,22 @@ public class Insertion {
     private static void insertionSort(int a[]) {
         int len = a.length;
         for (int i=1; i < len; i++) {
-            for (int j = i; j>0; j--) {
-                if (a[j-1] > a[j]) {
-                    int temp = a[j];
-                    a[j] = a[j-1];
-                    a[j-1] = temp;
-                }
+            int key = a[i];
+            int j = i - 1;
+
+            while (j>=0 && a[j] > key) {
+                a[j+1] = a[j];
+                j--;
             }
+            j = j + 1;
+            a[j] = key;
+            // for (int j = i; j>0; j--) {
+            //     if (a[j-1] > a[j]) {
+            //         int temp = a[j];
+            //         a[j] = a[j-1];
+            //         a[j-1] = temp;
+            //     }
+            // }
         }
     }
     
