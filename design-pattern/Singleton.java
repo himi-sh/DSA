@@ -1,14 +1,9 @@
 public class Singleton {
-    private static Singleton obj;
+    private static Singleton obj = new Singleton();
 
     private Singleton() {}
 
-    public static synchronized getInstance() {
-        if (null == obj) {
-            obj = new Singleton();
-            return obj;
-        } else {
-            return obj;
-        }
+    public static getInstance() {
+        return obj;
     }
 }
