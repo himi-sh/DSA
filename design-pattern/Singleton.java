@@ -3,7 +3,7 @@ public class Singleton {
 
     private Singleton() {}
 
-    public static getInstance() {
+    public static synchronized getInstance() {
         if (null == obj) {
             obj = new Singleton();
             return obj;
