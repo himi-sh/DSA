@@ -3,9 +3,11 @@ public class MultithreadTester {
     {
         int n = 8; // Number of threads
         for (int i = 0; i < n; i++) {
-            DemoUsingThreadClass object
-                = new DemoUsingThreadClass();
-            object.start();
+            // DemoUsingThreadClass object
+            //     = new DemoUsingThreadClass();
+            // object.start();
+            Thread th = new Thread(new DemoUsingRunnableInterface());
+            th.start();
         }
     }
 }
