@@ -21,5 +21,18 @@ public class SingleLinkedList {
         current.next = newNode;
     }
 
+    public void reverse() {
+        Node prev, current, next;
+        current = this.head;
+        next = this.head;
+        while (next != null) {
+            next = next.next;
+            current.next = prev;
+            prev.next = current;
+            current = next;
+        }
+        this.head = prev;
+    }
+
     
 }
