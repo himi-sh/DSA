@@ -10,5 +10,10 @@ public class Tester {
         stack.push(2);
 
         stack.print();
+
+        StackUsingLL sll = new StackUsingLL();
+        sll.push(10);
+        sll.push(20);
+        sll.push(30);
     }
 }
